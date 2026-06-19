@@ -139,3 +139,10 @@ export DATABASE_URL=postgresql://orderapp:orderapp_secret@localhost:5432/order_m
 alembic upgrade head
 uvicorn app.main:app --reload
 ```
+
+Backend Docker Hub Image Link
+https://hub.docker.com/r/onnati/order-management-api
+
+Backend API Hosted URL
+https://order-management-system-diat.onrender.com
+
