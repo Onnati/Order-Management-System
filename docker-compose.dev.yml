@@ -1,0 +1,23 @@
+# Development overrides — use with: docker compose -f docker-compose.yml -f docker-compose.dev.yml up
+
+services:
+  backend:
+    entrypoint: ["sh", "-c"]
+    command: ["alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload"]
+    user: root
+    volumes:
+      - ./backend:/app
+    environment:
+      DEBUG: "true"
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.dev
+    environment:
+      VITE_API_URL: ${VITE_API_URL}
+    ports:
+      - "${FRONTEND_PORT:-5173}:5173"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
