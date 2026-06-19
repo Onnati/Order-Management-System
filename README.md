@@ -6,6 +6,9 @@ Inventory & Order Management backend built with **FastAPI**, **PostgreSQL**, and
 
 <img width="1769" height="1010" alt="Screenshot From 2026-06-19 14-13-02" src="https://github.com/user-attachments/assets/98527923-0589-46f6-b2fa-c1dcc0734652" />
 
+<img width="1769" height="1010" alt="Screenshot From 2026-06-19 14-13-08" src="https://github.com/user-attachments/assets/fbd2870d-f89f-4d54-9a53-6c0c60b594f0" />
+
+<img width="1769" height="1010" alt="Screenshot From 2026-06-19 14-13-14" src="https://github.com/user-attachments/assets/de8691d8-4c17-4993-93cd-b8dbf3f8bd17" />
 
 
 ## Tech Stack
