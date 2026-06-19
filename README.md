@@ -2,6 +2,15 @@
 
 Inventory & Order Management backend built with **FastAPI**, **PostgreSQL**, and **Docker Compose**.
 
+<img width="1769" height="1010" alt="Screenshot From 2026-06-19 14-12-55" src="https://github.com/user-attachments/assets/25ad14d6-90ef-4993-b991-ff649931a80c" />
+
+<img width="1769" height="1010" alt="Screenshot From 2026-06-19 14-13-02" src="https://github.com/user-attachments/assets/98527923-0589-46f6-b2fa-c1dcc0734652" />
+
+<img width="1769" height="1010" alt="Screenshot From 2026-06-19 14-13-08" src="https://github.com/user-attachments/assets/fbd2870d-f89f-4d54-9a53-6c0c60b594f0" />
+
+<img width="1769" height="1010" alt="Screenshot From 2026-06-19 14-13-14" src="https://github.com/user-attachments/assets/de8691d8-4c17-4993-93cd-b8dbf3f8bd17" />
+
+
 ## Tech Stack
 
 | Layer | Technology |
@@ -131,8 +140,9 @@ alembic upgrade head
 uvicorn app.main:app --reload
 ```
 
-## Next Steps
+Backend Docker Hub Image Link
+https://hub.docker.com/r/onnati/order-management-api
 
-- [ ] React frontend
-- [ ] Authentication & authorization
-- [ ] Deploy to free hosting (Render, Railway, etc.)
+Backend API Hosted URL
+https://order-management-system-diat.onrender.com
+
