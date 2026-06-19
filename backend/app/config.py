@@ -9,6 +9,8 @@ class Settings(BaseSettings):
     api_host: str = "0.0.0.0"
     api_port: int = 8000
     debug: bool = True
+    # Comma-separated frontend URLs, or "*" to allow all origins
+    cors_origins: str = "*"
 
     @field_validator("database_url", mode="before")
     @classmethod
