@@ -130,9 +130,3 @@ export DATABASE_URL=postgresql://orderapp:orderapp_secret@localhost:5432/order_m
 alembic upgrade head
 uvicorn app.main:app --reload
 ```
-
-## Next Steps
-
-- [ ] React frontend
-- [ ] Authentication & authorization
-- [ ] Deploy to free hosting (Render, Railway, etc.)
