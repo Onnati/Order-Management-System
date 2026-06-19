@@ -1,6 +1,5 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.exceptions import RequestValidationError
-from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.exc import IntegrityError
 
 from app.config import settings
@@ -12,6 +11,7 @@ from app.exceptions import (
     validation_exception_handler,
 )
 from app.http_errors import APIError
+from app.middleware.cors import AllowAllOriginsMiddleware
 from app.routers import customers, inventory, orders, products
 
 app = FastAPI(
@@ -27,19 +27,7 @@ app.add_exception_handler(RequestValidationError, validation_exception_handler)
 app.add_exception_handler(IntegrityError, integrity_error_handler)
 app.add_exception_handler(Exception, unhandled_exception_handler)
 
-cors_origins = (
-    ["*"]
-    if settings.cors_origins.strip() == "*"
-    else [origin.strip() for origin in settings.cors_origins.split(",") if origin.strip()]
-)
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=cors_origins,
-    allow_credentials=False,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+app.add_middleware(AllowAllOriginsMiddleware)
 
 app.include_router(products.router)
 app.include_router(customers.router)
